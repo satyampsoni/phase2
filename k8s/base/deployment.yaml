@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: credit-default-prediction
-        image: satyampsoni/credit_default_prediction:latest
+        image: satyampsoni/credit-prediction:latest
         resources:
           limits:
             cpu: "1"
