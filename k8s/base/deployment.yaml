@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: credit-default-prediction-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: credit-default-prediction
+  template:
+    metadata:
+      labels:
+        app: credit-default-prediction
+    spec:
+      containers:
+      - name: credit-default-prediction
+        image: satyampsoni/credit_default_prediction:latest
+        resources:
+          limits:
+            cpu: "1"
+            memory: "1Gi"
+        ports:
+        - containerPort: 8501
