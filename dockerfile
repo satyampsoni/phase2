@@ -17,4 +17,4 @@ EXPOSE 8501
 ENV NAME CreditCardDefaultPrediction
 
 # Run streamlit when the container launches
-CMD ["streamlit", "run", "streamlit.py"]
+CMD ["streamlit", "run", "main.py"]
